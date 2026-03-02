@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jamaica Tours — Site Architecture Mind Map </title>
+<link rel="stylesheet" href="styles.css">
+<script src="scripts.js" defer></script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="header" role="banner">
+  <div class="header-top">
+    <div class="header-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830.62 107.93" aria-label="ResmarkWeb Logo">
+        <defs><style>.cls-1{fill:#ffffff;stroke-width:0px}.cls-2{fill:#f79420;stroke-width:0px}</style></defs>
+        <path class="cls-2" d="m154.56,50.65c0-6.64-4.7-10.1-12.18-10.1h-15.5v20.34h15.78c7.61,0,11.9-4.01,11.9-9.96v-.28Zm-.28,46.63l-15.22-22.69h-12.18v22.69h-15.64V26.57h32.38c16.74,0,26.71,8.86,26.71,23.39v.14c0,11.49-6.23,18.68-15.22,22l17.3,25.32-18.13-.14Z"/>
+        <polygon class="cls-2" points="184.45 97.28 184.45 26.57 237.86 26.57 237.86 40.41 199.95 40.41 199.95 54.8 233.3 54.8 233.3 68.64 199.95 68.64 199.95 83.45 238.42 83.45 238.42 97.28 184.45 97.28"/>
+        <path class="cls-2" d="m277.44,98.39c-11.07,0-21.73-4.01-30.03-11.35l9.27-11.07c6.37,5.26,13.01,8.58,21.17,8.58,6.37,0,10.24-2.49,10.24-6.64v-.14c0-3.88-2.49-5.95-14.25-9-14.25-3.6-23.53-7.61-23.53-21.59v-.14c0-12.87,10.38-21.31,24.77-21.31,9.55-.14,18.82,3.04,26.29,9l-8.03,11.76c-6.23-4.29-12.45-6.92-18.4-6.92s-9.13,2.77-9.13,6.23v.14c0,4.7,3.04,6.23,15.22,9.27,14.39,3.74,22.42,8.86,22.42,21.31v-.14c0,14.11-10.79,22-26.02,22Z"/>
+        <polygon class="cls-1" points="372.37 97.28 372.37 51.07 352.45 81.37 352.03 81.37 332.24 51.48 332.24 97.42 317.02 97.42 317.02 26.57 333.76 26.57 352.45 56.46 370.99 26.57 387.73 26.57 387.73 97.42 372.37 97.28"/>
+        <path class="cls-1" d="m436.03,44.7l-9.41,22.97h18.82l-9.41-22.97Zm21.45,52.58l-6.5-15.91h-29.89l-6.5,15.91h-15.91l30.31-71.27h14.39l30.31,71.27h-16.19Z"/>
+        <path class="cls-1" d="m528.05,50.65c0-6.64-4.7-10.1-12.18-10.1h-15.5v20.34h15.78c7.61,0,11.9-4.01,11.9-9.96v-.28Zm-.28,46.63l-15.22-22.69h-12.18v22.69h-15.64V26.57h32.38c16.74,0,26.71,8.86,26.71,23.39v.14c0,11.49-6.23,18.68-15.22,22l17.3,25.32-18.13-.14Z"/>
+        <polygon class="cls-1" points="603.61 97.28 581.61 67.26 573.44 75.7 573.44 97.28 557.81 97.28 557.81 26.57 573.44 26.57 573.44 57.57 602.23 26.57 621.05 26.57 592.26 56.6 622.43 97.42 603.61 97.28"/>
+        <path class="cls-2" d="m62.4,49.96c.14-1.66-.55-3.32-1.8-4.57-1.52-1.52-4.29-2.35-8.3-2.35h-9.41l-2.35,9.69c3.04,2.08,5.81,4.15,8.58,6.5,7.61,0,13.28-3.18,13.28-9.27Z"/>
+        <path class="cls-2" d="m31.95,88.43h-14.67l8.99-33.49c4.01,4.15,7.61,8.86,10.52,13.84l-4.84,19.65ZM46.34,15.5c-17.85,0-34.04,10.24-41.79,26.29,8.16.14,16.33,1.66,23.94,4.71l4.01-14.67h20.62c8.44,0,14.25,1.8,17.99,5.67,3.04,3.05,4.57,7.2,4.43,11.49,0,9.82-5.81,16.88-17.16,19.93,4.98,5.95,9.13,12.59,12.45,19.65h-16.88C41.08,54.39,18.25,45.12,3.58,43.87c-9.83,23.52,1.25,50.65,24.77,60.47,23.53,9.82,50.65-1.25,60.47-24.77,9.83-23.52-1.25-50.65-24.77-60.47-5.54-2.35-11.62-3.6-17.71-3.6Z"/>
+        <path class="cls-1" d="m673.7,9.63c7.67,0,12.57,6.04,12.57,12.41,0,8.49-15.35,39.68-26.62,60.58,12.74-12.57,30.21-27.6,42.62-42.29,2.94-3.59,4.41-5.06,6.53-5.06,2.45,0,4.25,1.14,4.25,4.57,0,.98-.98,3.92-2.12,6.69-3.1,8.16-8.65,23.35-8.65,34.78,0,5.88,1.14,8.33,3.92,8.33,9.31,0,31.51-33.8,31.51-66.78,0-5.88-2.29-8.16-4.25-9.63-1.47-1.31-2.77-2.45-2.77-4.24,0-3.59,2.29-5.55,5.39-5.55,4.41,0,10.12,6.37,10.12,16.98,0,42.29-26.94,78.05-43.43,78.05-6.53,0-9.96-7.51-9.96-15.02,0-4.41.82-16.49,3.75-26.12-5.06,5.06-13.06,13.88-36.25,36.57-5.72,5.72-8.98,8.82-11.1,8.82-2.61,0-4.57-2.61-4.57-6.53,0-2.78,4.08-10.78,8.16-18.45,11.92-22.21,24-48.66,24-54.05,0-4.08-1.63-6.04-5.06-6.04-15.67,0-48.99,22.37-48.99,38.05,0,4.08-1.47,6.86-4.25,6.86-2.28,0-5.06-1.47-5.06-5.88,0-20.74,39.84-47.03,60.25-47.03Z"/>
+        <path class="cls-1" d="m746.86,74.78c5.88-1.14,16.98-9.14,16.98-11.92,0-.98-.33-1.63-1.31-1.63-3.92,0-12.57,8.65-15.68,13.55Zm38.7-11.76c1.47,0,2.61.82,2.61,2.45,0,1.8-.82,2.94-2.78,5.39-7.67,9.47-20.9,23.51-39.03,23.51-5.39,0-9.96-4.25-9.96-11.43,0-.98-.82-1.47-.82-3.27,0-1.63,1.47-3.59,3.1-4.08,6.2-14.53,17.47-21.72,25.96-21.72,3.43,0,7.19,2.61,7.19,6.21,0,8.49-13.72,18.12-24.49,20.57-2.12.49-2.78,1.63-2.78,2.78,0,1.31,1.47,4.41,4.57,4.41,13.72,0,24.66-12.57,30.54-19.76,1.96-2.45,4.08-5.06,5.88-5.06Z"/>
+        <path class="cls-1" d="m804.17,27.76c-5.39,10.45-8.98,19.76-10.45,23.84,17.63-13.06,29.56-36.9,29.56-42.13,0-1.15-.65-1.96-2.12-1.96-2.29,0-9.8,6.2-16.98,20.25Zm26.45-20.74c0,12.9-13.72,35.6-39.03,55.35-1.3,2.29-3.1,8.65-3.26,10.94,9.14-10.94,19.59-20.25,28.9-20.25,4.25,0,7.02,3.1,7.02,7.84,0,13.72-12.57,32.33-24.98,32.33-6.04,0-7.51-2.78-7.51-5.72,0-1.96,1.8-4.08,4.41-4.08,1.47,0,2.94,1.63,4.41,1.63,6.04,0,15.19-13.88,15.19-21.56,0-1.63-1.47-2.61-2.94-2.61-3.1,0-10.12,6.37-18.13,15.19-3.1,3.43-6.53,9.47-6.53,11.92,0,2.78-3.59,6.04-5.55,6.04-2.12,0-3.92-.98-3.92-6.69,0-20.25,8.33-43.27,18.13-61.4,9.63-17.64,17.8-25.96,27.1-25.96,3.92,0,6.7,3.43,6.7,7.02Z"/>
+      </svg>
+    </div>
+    <div class="header-badge">Site Architecture</div>
+  </div>
+  <div class="header-content">
+    <h1>Jamaica Tours — Site Architecture Mind Map</h1>
+    <p>jamaicatours.com · Click any section to expand/collapse · Hover or tap pages for details</p>
+    <div class="header-meta">
+      <div class="header-stat"><div class="dot dot-dest"></div><strong>Destinations</strong> 10 pages</div>
+      <div class="header-stat"><div class="dot dot-exp"></div><strong>Experiences</strong> 21 pages</div>
+      <div class="header-stat"><div class="dot dot-food"></div><strong>Food &amp; Drink</strong> 5 pages</div>
+      <div class="header-stat"><div class="dot dot-culture"></div><strong>Culture</strong> 3 pages</div>
+      <div class="header-stat"><div class="dot dot-plan"></div><strong>Planning</strong> 6 pages</div>
+      <div class="header-stat"><div class="dot dot-event"></div><strong>Events/Blog/Util</strong> 4 pages</div>
+    </div>
+  </div>
+</header>
+
+<!-- TOOLBAR -->
+<div class="toolbar" role="search">
+  <div class="search-wrapper">
+    <span class="search-icon" aria-hidden="true">&#128269;</span>
+    <input type="search" id="search-input" class="search-input" placeholder="Search pages, URLs, or keywords..." aria-label="Search pages">
+  </div>
+  <div class="toolbar-buttons">
+    <button type="button" id="expand-all" class="toolbar-btn">Expand All</button>
+    <button type="button" id="collapse-all" class="toolbar-btn">Collapse All</button>
+  </div>
+  <span id="search-count" class="search-count" aria-live="polite"></span>
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="main-content" class="canvas">
+
+  <!-- ROOT -->
+  <div class="root">
+    <h2>Jamaica Tours</h2>
+    <div class="url">jamaicatours.com/</div>
+    <div class="kw"><span class="sv">jamaica tours · 2,900</span> &nbsp; <span class="sv">jamaica · 60,500</span></div>
+  </div>
+
+  <div class="trunk"></div>
+
+  <!-- MAIN BRANCHES -->
+  <div class="branch-row">
+
+    <!-- DESTINATIONS -->
+    <section class="section-col" aria-labelledby="heading-dest">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-dest" type="button" id="heading-dest" aria-expanded="true" aria-controls="tree-dest">
+        <div class="hub-label">Section</div>
+        Destinations
+        <div class="hub-count">9 destinations + hub <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-dest" role="region" aria-labelledby="heading-dest">
+        <div class="child-stem"></div>
+        <div class="leaf" data-title="hub page" data-url="/destinations/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Hub Page <span class="leaf-sv sv-dest">480</span></div><div class="leaf-url">/destinations/</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-mobay" data-title="montego bay" data-url="/destinations/montego-bay/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Montego Bay <span class="leaf-sv sv-dest">18,100</span></div><div class="leaf-url">/destinations/montego-bay/</div><div class="tooltip" role="tooltip" id="tip-dest-mobay">Jamaica's #1 tourist hub. Targets: montego bay, things to do in montego bay (1,600), montego bay airport (6,600). Cross-links: Rose Hall, Beaches, Rum Tours.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-ocho" data-title="ocho rios" data-url="/destinations/ocho-rios/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Ocho Rios <span class="leaf-sv sv-dest">14,800</span></div><div class="leaf-url">/destinations/ocho-rios/</div><div class="tooltip" role="tooltip" id="tip-dest-ocho">Waterfall &amp; adventure capital. Cross-links: Dunn's River Falls, Mystic Mountain, Blue Hole, Green Grotto Caves.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-negril" data-title="negril" data-url="/destinations/negril/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Negril <span class="leaf-sv sv-dest">6,600</span></div><div class="leaf-url">/destinations/negril/</div><div class="tooltip" role="tooltip" id="tip-dest-negril">Sunset &amp; beach paradise. Cross-links: Rick's Cafe, Beaches (Seven Mile Beach).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-kingston" data-title="kingston" data-url="/destinations/kingston/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Kingston <span class="leaf-sv sv-dest">2,900</span></div><div class="leaf-url">/destinations/kingston/</div><div class="tooltip" role="tooltip" id="tip-dest-kingston">Cultural capital. Cross-links: Bob Marley Museum, Devon House, Port Royal, Blue Mountain Coffee.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-spanish" data-title="spanish town" data-url="/destinations/spanish-town/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Spanish Town <span class="leaf-sv sv-dest">22,200</span></div><div class="leaf-url">/destinations/spanish-town/</div><div class="tooltip" role="tooltip" id="tip-dest-spanish">Former capital. Highest SV destination keyword. Cross-links: History &amp; Parishes, Kingston.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-port" data-title="port antonio" data-url="/destinations/port-antonio/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Port Antonio <span class="leaf-sv sv-dest">4,400</span></div><div class="leaf-url">/destinations/port-antonio/</div><div class="tooltip" role="tooltip" id="tip-dest-port">Eco-tourism paradise. Cross-links: Waterfalls (Somerset, Reach), Jerk Trail (Boston Bay).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-falmouth" data-title="falmouth" data-url="/destinations/falmouth/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Falmouth <span class="leaf-sv sv-dest">1,000</span></div><div class="leaf-url">/destinations/falmouth/</div><div class="tooltip" role="tooltip" id="tip-dest-falmouth">Cruise port. Luminous Lagoon (5,400), Martha Brae rafting (1,900).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-runaway" data-title="runaway bay" data-url="/destinations/runaway-bay/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">Runaway Bay <span class="leaf-sv sv-dest">2,400</span></div><div class="leaf-url">/destinations/runaway-bay/</div><div class="tooltip" role="tooltip" id="tip-dest-runaway">Quieter north coast. Cross-links: Green Grotto Caves.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-dest-south" data-title="south coast" data-url="/destinations/south-coast/"><div class="leaf-left-bar bar-dest"></div><div class="leaf-title">South Coast <span class="leaf-sv sv-dest">720</span></div><div class="leaf-url">/destinations/south-coast/</div><div class="tooltip" role="tooltip" id="tip-dest-south">Authentic, off-the-beaten-path. Cross-links: YS Falls, Appleton Estate, Jerk Trail.</div></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section class="section-col section-col--wide" aria-labelledby="heading-exp">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-exp" type="button" id="heading-exp" aria-expanded="true" aria-controls="tree-exp">
+        <div class="hub-label">Section</div>
+        Experiences
+        <div class="hub-count">21 pages · 7 sub-cats <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-exp" role="region" aria-labelledby="heading-exp">
+        <div class="child-stem"></div>
+
+        <div class="subcat-label">Waterfalls &amp; Rivers</div>
+        <div class="leaf" data-title="waterfalls hub" data-url="/experiences/waterfalls/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Waterfalls Hub <span class="leaf-sv sv-exp">480</span></div><div class="leaf-url">/experiences/waterfalls/</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-dunns" data-title="dunns river falls" data-url="/experiences/waterfalls/dunns-river-falls/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Dunn's River Falls <span class="leaf-sv sv-exp">14,800</span></div><div class="leaf-url">/experiences/waterfalls/dunns-river-falls/</div><div class="tooltip" role="tooltip" id="tip-exp-dunns">Jamaica's most famous attraction. Navigational intent. Combos: Blue Hole, Mystic Mountain.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-ys" data-title="ys falls" data-url="/experiences/waterfalls/ys-falls/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">YS Falls <span class="leaf-sv sv-exp">12,100</span></div><div class="leaf-url">/experiences/waterfalls/ys-falls/</div><div class="tooltip" role="tooltip" id="tip-exp-ys">Seven-tiered waterfall in St. Elizabeth. Combos: Appleton Estate. Near South Coast.</div></div>
+
+        <div class="subcat-label">Adventure</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-mystic" data-title="mystic mountain" data-url="/experiences/adventure/mystic-mountain/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Mystic Mountain <span class="leaf-sv sv-exp">14,800</span></div><div class="leaf-url">/experiences/adventure/mystic-mountain/</div><div class="tooltip" role="tooltip" id="tip-exp-mystic">Ocho Rios adventure park: Bobsled, Zipline, Sky Explorer. Tickets keyword: 2,900 SV.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-ricks" data-title="ricks cafe" data-url="/experiences/adventure/ricks-cafe/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Rick's Cafe <span class="leaf-sv sv-exp">9,900</span></div><div class="leaf-url">/experiences/adventure/ricks-cafe/</div><div class="tooltip" role="tooltip" id="tip-exp-ricks">Iconic Negril cliff jumping &amp; sunset spot. Menu keyword: 880 SV.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-blue" data-title="blue hole" data-url="/experiences/adventure/blue-hole/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Blue Hole <span class="leaf-sv sv-exp">4,400</span></div><div class="leaf-url">/experiences/adventure/blue-hole/</div><div class="tooltip" role="tooltip" id="tip-exp-blue">Natural pools &amp; cliff jumping near Ocho Rios. High commercial intent.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-grotto" data-title="green grotto caves" data-url="/experiences/adventure/green-grotto-caves/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Green Grotto Caves <span class="leaf-sv sv-exp">4,400</span></div><div class="leaf-url">/experiences/adventure/green-grotto-caves/</div><div class="tooltip" role="tooltip" id="tip-exp-grotto">Limestone caves with underground lake in Runaway Bay.</div></div>
+
+        <div class="subcat-label">Cultural Landmarks</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-devon" data-title="devon house" data-url="/experiences/cultural-landmarks/devon-house/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Devon House <span class="leaf-sv sv-exp">12,100</span></div><div class="leaf-url">/experiences/cultural-landmarks/devon-house/</div><div class="tooltip" role="tooltip" id="tip-exp-devon">Historic Kingston mansion + famous I Scream ice cream.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-marley" data-title="bob marley museum" data-url="/experiences/cultural-landmarks/bob-marley-museum/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Bob Marley Museum <span class="leaf-sv sv-exp">8,100</span></div><div class="leaf-url">/experiences/cultural-landmarks/bob-marley-museum/</div><div class="tooltip" role="tooltip" id="tip-exp-marley">Bob Marley's former home on Hope Road. Guided tours, recording studio, One Love Park.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-rose" data-title="rose hall" data-url="/experiences/cultural-landmarks/rose-hall/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Rose Hall <span class="leaf-sv sv-exp">3,600</span></div><div class="leaf-url">/experiences/cultural-landmarks/rose-hall/</div><div class="tooltip" role="tooltip" id="tip-exp-rose">White Witch legend. Day &amp; candlelight night tours in Montego Bay.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-royal" data-title="port royal" data-url="/experiences/cultural-landmarks/port-royal/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Port Royal <span class="leaf-sv sv-exp">2,900</span></div><div class="leaf-url">/experiences/cultural-landmarks/port-royal/</div><div class="tooltip" role="tooltip" id="tip-exp-royal">'Wickedest City on Earth'. Fort Charles, Giddy House, Gloria's Seafood (1,000 SV).</div></div>
+
+        <div class="subcat-label">General Hubs</div>
+        <div class="leaf" data-title="cultural sites hub" data-url="/experiences/cultural-landmarks/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Cultural Sites Hub <span class="leaf-sv sv-exp">260</span></div><div class="leaf-url">/experiences/cultural-landmarks/</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-beaches" data-title="beaches" data-url="/experiences/beaches/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Beaches <span class="leaf-sv sv-exp">1,000</span></div><div class="leaf-url">/experiences/beaches/</div><div class="tooltip" role="tooltip" id="tip-exp-beaches">Top beaches by region: Mahogany (6,600), Doctor's Cave (4,400), Frenchman's Cove (3,600).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-tours" data-title="tours and adventures" data-url="/experiences/tours/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Tours &amp; Adventures <span class="leaf-sv sv-exp">2,900</span></div><div class="leaf-url">/experiences/tours/</div><div class="tooltip" role="tooltip" id="tip-exp-tours">Primary commercial funnel to Island Routes. Yaaman (2,900), Dolphin Cove (2,400).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-nature" data-title="nature and gardens" data-url="/experiences/nature-gardens/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Nature &amp; Gardens <span class="leaf-sv sv-exp">1,900</span></div><div class="leaf-url">/experiences/nature-gardens/</div><div class="tooltip" role="tooltip" id="tip-exp-nature">Blue Mountains, Hope Gardens (3,600), Holywell Park (2,400).</div></div>
+
+        <div class="subcat-label">Water Activities</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-lagoon" data-title="luminous lagoon" data-url="/experiences/water-activities/luminous-lagoon/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Luminous Lagoon <span class="leaf-sv sv-exp">5,400</span></div><div class="leaf-url">/experiences/water-activities/luminous-lagoon/</div><div class="tooltip" role="tooltip" id="tip-exp-lagoon">Bioluminescent bay in Falmouth. Glistening Waters (5,400 SV). Night boat tours. Cross-links: Falmouth, Tours.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-rafting" data-title="rafting and rivers" data-url="/experiences/water-activities/rafting/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Rafting &amp; Rivers <span class="leaf-sv sv-exp">1,900</span></div><div class="leaf-url">/experiences/water-activities/rafting/</div><div class="tooltip" role="tooltip" id="tip-exp-rafting">Martha Brae Rafting (1,900), Black River Safari (720), Rio Grande (480). 54 keywords total. Cross-links: Falmouth, Port Antonio, South Coast.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-water" data-title="water sports" data-url="/experiences/water-activities/water-sports/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Water Sports <span class="leaf-sv sv-exp">480</span></div><div class="leaf-url">/experiences/water-activities/water-sports/</div><div class="tooltip" role="tooltip" id="tip-exp-water">Snorkeling (140), Catamaran cruises, Cool Runnings (480), Diving in Negril (70). 17 keywords total. Cross-links: Ocho Rios, Montego Bay, Negril.</div></div>
+
+        <div class="subcat-label">More Adventures</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-dolphin" data-title="dolphin cove" data-url="/experiences/adventure/dolphin-cove/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Dolphin Cove <span class="leaf-sv sv-exp">2,400</span></div><div class="leaf-url">/experiences/adventure/dolphin-cove/</div><div class="tooltip" role="tooltip" id="tip-exp-dolphin">Swim with dolphins. Ocho Rios &amp; Montego Bay (1,600). 12 keywords. Cross-links: Ocho Rios, Montego Bay, Tours.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-golf" data-title="golf" data-url="/experiences/adventure/golf/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Golf <span class="leaf-sv sv-exp">880</span></div><div class="leaf-url">/experiences/adventure/golf/</div><div class="tooltip" role="tooltip" id="tip-exp-golf">Cinnamon Hill (720), White Witch (390), Tryall (210), Half Moon (260). 50 keywords. Cross-links: Montego Bay, Runaway Bay.</div></div>
+
+        <div class="subcat-label">Romance</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-weddings" data-title="weddings and honeymoons" data-url="/experiences/weddings/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Weddings &amp; Honeymoons <span class="leaf-sv sv-exp">480</span></div><div class="leaf-url">/experiences/weddings/</div><div class="tooltip" role="tooltip" id="tip-exp-weddings">Wedding venues (480), Couples Swept Away (2,400), marriage license info (210), wedding coordinators. 36 keywords. Cross-links: Where to Stay, Itineraries.</div></div>
+
+        <div class="subcat-label">Nightlife</div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-exp-nightlife" data-title="nightlife and bars" data-url="/experiences/nightlife/"><div class="leaf-left-bar bar-exp"></div><div class="leaf-title">Nightlife &amp; Bars <span class="leaf-sv sv-exp">720</span></div><div class="leaf-url">/experiences/nightlife/</div><div class="tooltip" role="tooltip" id="tip-exp-nightlife">Pier One MoBay (4,400), Clubs in Kingston (1,000), Kingston Dub Club (1,300), MoBay nightlife (720). 179 keywords. Cross-links: Montego Bay, Kingston, Negril.</div></div>
+      </div>
+    </section>
+
+    <!-- FOOD & DRINK -->
+    <section class="section-col" aria-labelledby="heading-food">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-food" type="button" id="heading-food" aria-expanded="true" aria-controls="tree-food">
+        <div class="hub-label">Section</div>
+        Food &amp; Drink
+        <div class="hub-count">5 pages (was 2) <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-food" role="region" aria-labelledby="heading-food">
+        <div class="child-stem"></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-food-hub" data-title="cuisine hub" data-url="/food-drink/"><div class="leaf-left-bar bar-food"></div><div class="leaf-title">Cuisine Hub <span class="leaf-sv sv-food">1,000</span></div><div class="leaf-url">/food-drink/</div><div class="tooltip" role="tooltip" id="tip-food-hub">Jamaican food culture, signature dishes, drink overview. Links to all sub-pages.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-food-eat" data-title="where to eat" data-url="/food-drink/restaurants/"><div class="leaf-left-bar bar-food"></div><div class="leaf-title">Where to Eat <span class="leaf-sv sv-food">590</span></div><div class="leaf-url">/food-drink/restaurants/</div><div class="tooltip" role="tooltip" id="tip-food-eat">Restaurant hub. Kingston restaurants (12,100), MoBay (5,400), Ocho Rios (5,400).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-food-rum" data-title="rum tours" data-url="/food-drink/rum-tours/"><div class="leaf-left-bar bar-food"></div><div class="leaf-title">Rum Tours <span class="leaf-sv sv-food">2,900</span></div><div class="leaf-url">/food-drink/rum-tours/</div><div class="tooltip" role="tooltip" id="tip-food-rum">Appleton Estate, Hampden Estate, Worthy Park. Combo with YS Falls.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-food-coffee" data-title="blue mountain coffee" data-url="/food-drink/coffee/"><div class="leaf-left-bar bar-food"></div><div class="leaf-title">Blue Mtn Coffee <span class="leaf-sv sv-food">880</span></div><div class="leaf-url">/food-drink/coffee/</div><div class="tooltip" role="tooltip" id="tip-food-coffee">World-renowned coffee. Estate tours, tastings, where to buy.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-food-jerk" data-title="jerk trail" data-url="/food-drink/jerk/"><div class="leaf-left-bar bar-food"></div><div class="leaf-title">Jerk Trail <span class="leaf-sv sv-food">590</span></div><div class="leaf-url">/food-drink/jerk/</div><div class="tooltip" role="tooltip" id="tip-food-jerk">Jerk culture road trip. Boston Bay (720), Scotchies, Ocho Rios Jerk Centre (1,600).</div></div>
+      </div>
+    </section>
+
+    <!-- CULTURE -->
+    <section class="section-col" aria-labelledby="heading-culture">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-culture" type="button" id="heading-culture" aria-expanded="true" aria-controls="tree-culture">
+        <div class="hub-label">Section</div>
+        Culture
+        <div class="hub-count">3 pages <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-culture" role="region" aria-labelledby="heading-culture">
+        <div class="child-stem"></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-cult-music" data-title="music and reggae" data-url="/culture/music/"><div class="leaf-left-bar bar-culture"></div><div class="leaf-title">Music &amp; Reggae <span class="leaf-sv sv-culture">320</span></div><div class="leaf-url">/culture/music/</div><div class="tooltip" role="tooltip" id="tip-cult-music">Reggae (1,600), Reggae Sumfest (1,300), Bob Marley Museum (8,100).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-cult-lang" data-title="language and patois" data-url="/culture/language/"><div class="leaf-left-bar bar-culture"></div><div class="leaf-title">Language &amp; Patois <span class="leaf-sv sv-culture">1,900</span></div><div class="leaf-url">/culture/language/</div><div class="tooltip" role="tooltip" id="tip-cult-lang">Jamaican Patois, Creole language overview, phrases for visitors.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-cult-hist" data-title="history and parishes" data-url="/culture/history/"><div class="leaf-left-bar bar-culture"></div><div class="leaf-title">History &amp; Parishes <span class="leaf-sv sv-culture">3,600</span></div><div class="leaf-url">/culture/history/</div><div class="tooltip" role="tooltip" id="tip-cult-hist">14 parishes (3,600), National Heroes (2,900), Independence Day (2,400).</div></div>
+      </div>
+    </section>
+
+    <!-- PLAN YOUR TRIP -->
+    <section class="section-col" aria-labelledby="heading-plan">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-plan" type="button" id="heading-plan" aria-expanded="true" aria-controls="tree-plan">
+        <div class="hub-label">Section</div>
+        Plan Your Trip
+        <div class="hub-count">6 pages <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-plan" role="region" aria-labelledby="heading-plan">
+        <div class="child-stem"></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-air" data-title="airports" data-url="/plan/airports/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Airports <span class="leaf-sv sv-plan">22,200</span></div><div class="leaf-url">/plan/airports/</div><div class="tooltip" role="tooltip" id="tip-plan-air">Sangster (MBJ) 22,200, Norman Manley, Club Mobay (4,400), Ian Fleming (1,900).</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-tips" data-title="travel tips" data-url="/plan/travel-tips/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Travel Tips <span class="leaf-sv sv-plan">1,000</span></div><div class="leaf-url">/plan/travel-tips/</div><div class="tooltip" role="tooltip" id="tip-plan-tips">Advisories (4,400), public holidays (1,900), hurricane season, visa info.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-stay" data-title="where to stay" data-url="/plan/where-to-stay/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Where to Stay <span class="leaf-sv sv-plan">720</span></div><div class="leaf-url">/plan/where-to-stay/</div><div class="tooltip" role="tooltip" id="tip-plan-stay">MoBay hotels (6,600), Sandals (5,400), boutique hotels, villas.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-itin" data-title="itineraries" data-url="/plan/itineraries/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Itineraries <span class="leaf-sv sv-plan">480</span></div><div class="leaf-url">/plan/itineraries/</div><div class="tooltip" role="tooltip" id="tip-plan-itin">7-Day Highlights, 3-Day MoBay, 5-Day Adventure, Food Lover's, Budget Jamaica.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-around" data-title="getting around" data-url="/plan/getting-around/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Getting Around <span class="leaf-sv sv-plan">320</span></div><div class="leaf-url">/plan/getting-around/</div><div class="tooltip" role="tooltip" id="tip-plan-around">Transportation guide: transfers, taxis, rental cars, route taxis, drive times.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-plan-cannabis" data-title="cannabis ganja guide" data-url="/plan/cannabis-guide/"><div class="leaf-left-bar bar-plan"></div><div class="leaf-title">Cannabis / Ganja Guide <span class="leaf-sv sv-plan">480</span></div><div class="leaf-url">/plan/cannabis-guide/</div><div class="tooltip" role="tooltip" id="tip-plan-cannabis">Legal status (480 SV), herb houses, decriminalization info, what visitors need to know. Cross-links: Travel Tips, Culture.</div></div>
+      </div>
+    </section>
+
+    <!-- EVENTS / BLOG / UTILITY -->
+    <section class="section-col" aria-labelledby="heading-other">
+      <div class="section-stem"></div>
+      <button class="section-hub hub-event" type="button" id="heading-other" aria-expanded="true" aria-controls="tree-other">
+        <div class="hub-label">Section</div>
+        Events &amp; More
+        <div class="hub-count">4 pages <span class="toggle-arrow">&#9660;</span></div>
+      </button>
+      <div class="child-tree" id="tree-other" role="region" aria-labelledby="heading-other">
+        <div class="child-stem"></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-evt-events" data-title="events and festivals" data-url="/events/"><div class="leaf-left-bar bar-event"></div><div class="leaf-title">Events &amp; Festivals <span class="leaf-sv sv-event">260</span></div><div class="leaf-url">/events/</div><div class="tooltip" role="tooltip" id="tip-evt-events">Carnival (1,300), Reggae Sumfest (1,300), Rebel Salute, Coffee Festival.</div></div>
+        <div class="leaf" tabindex="0" aria-describedby="tip-evt-blog" data-title="blog island guide" data-url="/blog/"><div class="leaf-left-bar bar-util"></div><div class="leaf-title">Blog / Island Guide <span class="leaf-sv sv-util">170</span></div><div class="leaf-url">/blog/</div><div class="tooltip" role="tooltip" id="tip-evt-blog">Long-tail keyword capture. Categorized posts support all pillar pages.</div></div>
+        <div class="leaf" data-title="about" data-url="/about/"><div class="leaf-left-bar bar-util"></div><div class="leaf-title">About <span class="leaf-sv sv-util">2,900</span></div><div class="leaf-url">/about/</div></div>
+        <div class="leaf" data-title="contact" data-url="/contact/"><div class="leaf-left-bar bar-util"></div><div class="leaf-title">Contact</div><div class="leaf-url">/contact/</div></div>
+      </div>
+    </section>
+
+  </div><!-- /branch-row -->
+
+</main><!-- /canvas -->
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830.62 107.93" aria-label="ResmarkWeb Logo">
+      <defs><style>.ftr-1{fill:rgba(255,255,255,0.5);stroke-width:0px}.ftr-2{fill:#f79420;stroke-width:0px}</style></defs>
+      <path class="ftr-2" d="m154.56,50.65c0-6.64-4.7-10.1-12.18-10.1h-15.5v20.34h15.78c7.61,0,11.9-4.01,11.9-9.96v-.28Zm-.28,46.63l-15.22-22.69h-12.18v22.69h-15.64V26.57h32.38c16.74,0,26.71,8.86,26.71,23.39v.14c0,11.49-6.23,18.68-15.22,22l17.3,25.32-18.13-.14Z"/>
+      <polygon class="ftr-2" points="184.45 97.28 184.45 26.57 237.86 26.57 237.86 40.41 199.95 40.41 199.95 54.8 233.3 54.8 233.3 68.64 199.95 68.64 199.95 83.45 238.42 83.45 238.42 97.28 184.45 97.28"/>
+      <path class="ftr-2" d="m277.44,98.39c-11.07,0-21.73-4.01-30.03-11.35l9.27-11.07c6.37,5.26,13.01,8.58,21.17,8.58,6.37,0,10.24-2.49,10.24-6.64v-.14c0-3.88-2.49-5.95-14.25-9-14.25-3.6-23.53-7.61-23.53-21.59v-.14c0-12.87,10.38-21.31,24.77-21.31,9.55-.14,18.82,3.04,26.29,9l-8.03,11.76c-6.23-4.29-12.45-6.92-18.4-6.92s-9.13,2.77-9.13,6.23v.14c0,4.7,3.04,6.23,15.22,9.27,14.39,3.74,22.42,8.86,22.42,21.31v-.14c0,14.11-10.79,22-26.02,22Z"/>
+      <polygon class="ftr-1" points="372.37 97.28 372.37 51.07 352.45 81.37 352.03 81.37 332.24 51.48 332.24 97.42 317.02 97.42 317.02 26.57 333.76 26.57 352.45 56.46 370.99 26.57 387.73 26.57 387.73 97.42 372.37 97.28"/>
+      <path class="ftr-1" d="m436.03,44.7l-9.41,22.97h18.82l-9.41-22.97Zm21.45,52.58l-6.5-15.91h-29.89l-6.5,15.91h-15.91l30.31-71.27h14.39l30.31,71.27h-16.19Z"/>
+      <path class="ftr-1" d="m528.05,50.65c0-6.64-4.7-10.1-12.18-10.1h-15.5v20.34h15.78c7.61,0,11.9-4.01,11.9-9.96v-.28Zm-.28,46.63l-15.22-22.69h-12.18v22.69h-15.64V26.57h32.38c16.74,0,26.71,8.86,26.71,23.39v.14c0,11.49-6.23,18.68-15.22,22l17.3,25.32-18.13-.14Z"/>
+      <polygon class="ftr-1" points="603.61 97.28 581.61 67.26 573.44 75.7 573.44 97.28 557.81 97.28 557.81 26.57 573.44 26.57 573.44 57.57 602.23 26.57 621.05 26.57 592.26 56.6 622.43 97.42 603.61 97.28"/>
+      <path class="ftr-2" d="m62.4,49.96c.14-1.66-.55-3.32-1.8-4.57-1.52-1.52-4.29-2.35-8.3-2.35h-9.41l-2.35,9.69c3.04,2.08,5.81,4.15,8.58,6.5,7.61,0,13.28-3.18,13.28-9.27Z"/>
+      <path class="ftr-2" d="m31.95,88.43h-14.67l8.99-33.49c4.01,4.15,7.61,8.86,10.52,13.84l-4.84,19.65ZM46.34,15.5c-17.85,0-34.04,10.24-41.79,26.29,8.16.14,16.33,1.66,23.94,4.71l4.01-14.67h20.62c8.44,0,14.25,1.8,17.99,5.67,3.04,3.05,4.57,7.2,4.43,11.49,0,9.82-5.81,16.88-17.16,19.93,4.98,5.95,9.13,12.59,12.45,19.65h-16.88C41.08,54.39,18.25,45.12,3.58,43.87c-9.83,23.52,1.25,50.65,24.77,60.47,23.53,9.82,50.65-1.25,60.47-24.77,9.83-23.52-1.25-50.65-24.77-60.47-5.54-2.35-11.62-3.6-17.71-3.6Z"/>
+      <path class="ftr-1" d="m673.7,9.63c7.67,0,12.57,6.04,12.57,12.41,0,8.49-15.35,39.68-26.62,60.58,12.74-12.57,30.21-27.6,42.62-42.29,2.94-3.59,4.41-5.06,6.53-5.06,2.45,0,4.25,1.14,4.25,4.57,0,.98-.98,3.92-2.12,6.69-3.1,8.16-8.65,23.35-8.65,34.78,0,5.88,1.14,8.33,3.92,8.33,9.31,0,31.51-33.8,31.51-66.78,0-5.88-2.29-8.16-4.25-9.63-1.47-1.31-2.77-2.45-2.77-4.24,0-3.59,2.29-5.55,5.39-5.55,4.41,0,10.12,6.37,10.12,16.98,0,42.29-26.94,78.05-43.43,78.05-6.53,0-9.96-7.51-9.96-15.02,0-4.41.82-16.49,3.75-26.12-5.06,5.06-13.06,13.88-36.25,36.57-5.72,5.72-8.98,8.82-11.1,8.82-2.61,0-4.57-2.61-4.57-6.53,0-2.78,4.08-10.78,8.16-18.45,11.92-22.21,24-48.66,24-54.05,0-4.08-1.63-6.04-5.06-6.04-15.67,0-48.99,22.37-48.99,38.05,0,4.08-1.47,6.86-4.25,6.86-2.28,0-5.06-1.47-5.06-5.88,0-20.74,39.84-47.03,60.25-47.03Z"/>
+      <path class="ftr-1" d="m746.86,74.78c5.88-1.14,16.98-9.14,16.98-11.92,0-.98-.33-1.63-1.31-1.63-3.92,0-12.57,8.65-15.68,13.55Zm38.7-11.76c1.47,0,2.61.82,2.61,2.45,0,1.8-.82,2.94-2.78,5.39-7.67,9.47-20.9,23.51-39.03,23.51-5.39,0-9.96-4.25-9.96-11.43,0-.98-.82-1.47-.82-3.27,0-1.63,1.47-3.59,3.1-4.08,6.2-14.53,17.47-21.72,25.96-21.72,3.43,0,7.19,2.61,7.19,6.21,0,8.49-13.72,18.12-24.49,20.57-2.12.49-2.78,1.63-2.78,2.78,0,1.31,1.47,4.41,4.57,4.41,13.72,0,24.66-12.57,30.54-19.76,1.96-2.45,4.08-5.06,5.88-5.06Z"/>
+      <path class="ftr-1" d="m804.17,27.76c-5.39,10.45-8.98,19.76-10.45,23.84,17.63-13.06,29.56-36.9,29.56-42.13,0-1.15-.65-1.96-2.12-1.96-2.29,0-9.8,6.2-16.98,20.25Zm26.45-20.74c0,12.9-13.72,35.6-39.03,55.35-1.3,2.29-3.1,8.65-3.26,10.94,9.14-10.94,19.59-20.25,28.9-20.25,4.25,0,7.02,3.1,7.02,7.84,0,13.72-12.57,32.33-24.98,32.33-6.04,0-7.51-2.78-7.51-5.72,0-1.96,1.8-4.08,4.41-4.08,1.47,0,2.94,1.63,4.41,1.63,6.04,0,15.19-13.88,15.19-21.56,0-1.63-1.47-2.61-2.94-2.61-3.1,0-10.12,6.37-18.13,15.19-3.1,3.43-6.53,9.47-6.53,11.92,0,2.78-3.59,6.04-5.55,6.04-2.12,0-3.92-.98-3.92-6.69,0-20.25,8.33-43.27,18.13-61.4,9.63-17.64,17.8-25.96,27.1-25.96,3.92,0,6.7,3.43,6.7,7.02Z"/>
+    </svg>
+  </div>
+  <div class="footer-text">Jamaica Tours Site Architecture Mind Map </div>
+</footer>
+
+</body>
+</html>
