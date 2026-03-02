@@ -486,11 +486,65 @@ body {
   font-size: 11px;
   z-index: 50;
   box-shadow: 0 6px 20px rgba(15,25,34,0.3);
-  max-width: 280px;
+  max-width: 360px;
+  min-width: 260px;
   white-space: normal;
   line-height: 1.4;
   border-top: 2px solid var(--brand-orange);
 }
+
+/* Keyword table inside tooltip */
+.tip-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.tip-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.tip-row:last-child { border-bottom: none; }
+.tip-row.tip-header {
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+.tip-kw {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tip-sv {
+  flex-shrink: 0;
+  width: 48px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.tip-intent {
+  flex-shrink: 0;
+  width: 42px;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.intent-info { background: rgba(26,109,212,0.3); color: #7bb8ff; }
+.intent-comm { background: rgba(247,148,32,0.3); color: #ffc170; }
+.intent-nav  { background: rgba(156,85,200,0.3); color: #cda4f0; }
+.intent-trans { background: rgba(13,138,94,0.3); color: #6ddba8; }
 .leaf .tooltip::after {
   content: '';
   position: absolute;
